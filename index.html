@@ -17,7 +17,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -216,7 +216,7 @@
 
     function formatFrameName(index) {
       const pad = String(index).padStart(3, '0');
-      return `./bg_frames/ezgif-frame-${pad}.jpg`;
+      return `bg_frames/ezgif-frame-${pad}.jpg`;
     }
 
     function loadFrames() {
@@ -862,7 +862,7 @@
 
     async function loadPortfolioContent() {
       try {
-        const response = await fetch('./content.json?t=' + Date.now());
+        const response = await fetch('content.json?t=' + Date.now());
         if (response.ok) {
           const data = await response.json();
           renderPortfolioUI(data);

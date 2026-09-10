@@ -1,9 +1,10 @@
 {
-  "name": "IT23190870-portfolio",
+  "name": "portfolio-vibed",
   "version": "1.0.0",
-  "description": "IT23190870 - Dummy Software Engineering Portfolio",
-  "main": "server.js",
+  "description": "Software Engineering Portfolio",
+  "main": "index.html",
   "scripts": {
+    "build": "echo Static Build Complete",
     "start": "node server.js",
     "dev": "node server.js"
   },
@@ -13,6 +14,6 @@
     "full-stack",
     "javascript"
   ],
-  "author": "Ummu Salma Hasmy",
+  "author": "Sophia Martinez",
   "license": "ISC"
 }

@@ -1,0 +1,18 @@
+{
+  "name": "portfolio-vibed",
+  "version": "1.0.0",
+  "description": "Ummu Salma Hasmy - Software Engineering Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "software-engineering",
+    "full-stack",
+    "javascript"
+  ],
+  "author": "Ummu Salma Hasmy",
+  "license": "ISC"
+}

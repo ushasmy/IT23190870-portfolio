@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ummu Salma — Software Engineering Portfolio</title>
+
+  <!-- Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Outfit:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+  <!-- Fullscreen Canvas Background for Scroll Animation -->
+  <div id="canvas-container">
+    <canvas id="sequence-canvas"></canvas>
+  </div>
+
+  <!-- Content Overlay Driven by Portfolio Data -->
+  <div id="content-overlay">
+
+    <!-- NAVIGATION BAR -->
+    <nav>
+      <div class="nav-brand">
+        <a href="#hero" class="nav-logo-link">
+          <span class="nav-name" id="nav-dev-name">UMMU SALMA HASMY</span>
+        </a>
+      </div>
+
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#hero" class="nav-link active">About</a></li>
+        <li><a href="#what-i-do" class="nav-link">Expertise</a></li>
+        <li><a href="#experience-education" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#toolkit-process" class="nav-link">Process</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button class="nav-mobile-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <i data-lucide="menu"></i>
+      </button>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div>
+        <h1 class="dev-name-title">
+          HI, I'M <span class="name-highlight" id="dev-header-name">UMMU SALMA HASMY</span>
+        </h1>
+        <div style="display: flex; align-items: center; flex-wrap: wrap;">
+          <span class="hero-title-sub" id="title-sub">SOFTWARE ENGINEER</span>
+          <span class="hero-script" id="title-script">Portfolio</span>
+        </div>
+      </div>
+
+      <div class="hero-sub-row">
+        <div class="hero-tagline-box">
+          <p class="hero-tagline" id="hero-tagline">4th-Year Software Engineering Undergraduate @ SLIIT with hands-on experience in full-stack web applications, microservices architecture, cross-platform mobile apps, cloud deployment, and scalable backend systems.</p>
+          <p class="hero-code-tag" id="hero-code-tag">&lt;/ SOFTWARE ENGINEERING . FULL-STACK . MOBILE . CLOUD &amp; DEVOPS /&gt;</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT I DO SECTION -->
+    <section id="what-i-do">
+      <div class="section-header-row">
+        <div class="section-title-group">
+          <span class="section-tag" id="services-tag">MY EXPERTISE</span>
+          <h2 class="section-title" id="services-title">WHAT I BUILD ✦</h2>
+        </div>
+        <p class="section-desc" id="services-desc">I build robust web & mobile applications, microservice architectures, and modern digital platforms with clean code and cloud integration.</p>
+      </div>
+
+      <div class="services-grid" id="services-container">
+        <!-- Dynamically Rendered -->
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & EDUCATION DUAL SECTION -->
+    <section id="experience-education">
+      <div class="exp-edu-grid">
+
+        <!-- WORK EXPERIENCE -->
+        <div>
+          <div class="section-header-row" style="margin-bottom: 24px;">
+            <div class="section-title-group">
+              <span class="section-tag" id="exp-tag">CAREER JOURNEY</span>
+              <h2 class="section-title" id="exp-title" style="font-size: 1.8rem;">WORK EXPERIENCE ✦</h2>
+            </div>
+          </div>
+          <div class="timeline-list" id="experience-container">
+            <!-- Dynamically Rendered -->
+          </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div>
+          <div class="section-header-row" style="margin-bottom: 24px;">
+            <div class="section-title-group">
+              <span class="section-tag" id="edu-tag">ACADEMIC BACKGROUND</span>
+              <h2 class="section-title" id="edu-title" style="font-size: 1.8rem;">EDUCATION ✦</h2>
+            </div>
+          </div>
+          <div class="timeline-list" id="education-container">
+            <!-- Dynamically Rendered -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="projects">
+      <div class="section-header-row">
+        <div class="section-title-group">
+          <span class="section-tag" id="projects-tag">PORTFOLIO WORK</span>
+          <h2 class="section-title" id="projects-title">FEATURED PROJECTS ✦</h2>
+        </div>
+      </div>
+
+      <div class="projects-list-container" id="projects-container">
+        <!-- Dynamically Rendered Top 3 Projects -->
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;" id="all-projects-btn-wrapper">
+        <button id="open-all-projects-btn" class="btn-action btn-primary" style="padding: 14px 28px; font-size: 0.95rem; cursor: pointer; border: none;">
+          <i data-lucide="grid"></i> EXPLORE ALL PROJECTS (<span id="projects-count-badge">0</span>)
+        </button>
+      </div>
+    </section>
+
+    <!-- DUAL SECTION: TOOLKIT & WORK PROCESS -->
+    <section id="toolkit-process">
+      <div class="dual-grid">
+
+        <!-- TOOLKIT -->
+        <div class="glass-card">
+          <h2 class="section-title" style="font-size: 1.6rem; margin-bottom: 16px;" id="toolkit-title">TECH STACK &
+            TOOLS</h2>
+          <div class="toolkit-grid" id="toolkit-container">
+            <!-- Dynamically Rendered -->
+          </div>
+        </div>
+
+        <!-- WORK PROCESS -->
+        <div class="glass-card">
+          <h2 class="section-title" style="font-size: 1.6rem; margin-bottom: 16px;" id="process-title">DEVELOPMENT
+            PROCESS</h2>
+          <div class="process-list" id="process-container">
+            <!-- Dynamically Rendered -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CALL TO ACTION CARD -->
+      <div class="cta-card" id="cta-box">
+        <div class="cta-text">
+          <h2 id="cta-title">WANT TO COLLABORATE OR DISCUSS OPPORTUNITIES? LET'S CONNECT. ✦</h2>
+          <p id="cta-subtitle">Available for full-time graduate opportunities, part-time web development & collaborative software engineering projects.</p>
+        </div>
+        <a href="https://wa.me/94758414963" target="_blank" class="cta-btn" id="cta-btn">GET IN TOUCH <i data-lucide="message-circle"></i></a>
+      </div>
+    </section>
+
+    <!-- FOOTER / CONTACT -->
+    <footer id="contact">
+      <div class="footer-brand" id="footer-dev-name">UMMU SALMA HASMY</div>
+      <div class="social-links" id="socials-container">
+        <!-- Dynamically Rendered -->
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ALL PROJECTS MODAL -->
+  <div id="projects-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <span class="section-tag" style="margin-bottom: 4px;">COMPLETE PORTFOLIO</span>
+          <h2 class="section-title" style="font-size: 1.8rem; margin: 0;">ALL PROJECTS (<span id="modal-project-count">0</span>)</h2>
+        </div>
+        <button class="modal-close-btn" id="close-projects-modal" aria-label="Close modal">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-projects-container">
+        <!-- Dynamically Rendered All Projects -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* =========================================================
+       1. CANVAS SMOOTH SCROLL ANIMATION ENGINE
+       ========================================================= */
+    const canvas = document.getElementById('sequence-canvas');
+    const ctx = canvas.getContext('2d');
+
+    const images = [];
+    let currentFrame = 0;
+    let targetFrame = 0;
+    const MAX_PROBE_FRAMES = 350;
+
+    function formatFrameName(index) {
+      const pad = String(index).padStart(3, '0');
+      return `./bg_frames/ezgif-frame-${pad}.jpg`;
+    }
+
+    function loadFrames() {
+      for (let i = 1; i <= MAX_PROBE_FRAMES; i++) {
+        const img = new Image();
+        img.src = formatFrameName(i);
+        img.onload = () => {
+          images[i - 1] = img;
+          if (i === 1) renderFrame(0);
+        };
+      }
+    }
+
+    function resizeCanvas() {
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = window.innerWidth * dpr;
+      canvas.height = window.innerHeight * dpr;
+      renderFrame(Math.round(currentFrame));
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+
+    function getScrollProgress() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      const docHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+      const winHeight = window.innerHeight;
+      const maxScroll = docHeight - winHeight;
+
+      if (maxScroll <= 0) return 0;
+      return Math.max(0, Math.min(1, scrollTop / maxScroll));
+    }
+
+    function drawCover(img) {
+      if (!img || !img.complete || img.naturalWidth === 0) return;
+
+      const cw = canvas.width;
+      const ch = canvas.height;
+      const iw = img.naturalWidth;
+      const ih = img.naturalHeight;
+
+      const scale = Math.max(cw / iw, ch / ih);
+      const nw = iw * scale;
+      const nh = ih * scale;
+      const cx = (cw - nw) / 2;
+      const cy = (ch - nh) / 2;
+
+      ctx.clearRect(0, 0, cw, ch);
+      ctx.drawImage(img, cx, cy, nw, nh);
+    }
+
+    function renderFrame(index) {
+      const validImages = images.filter(img => img && img.complete);
+      if (validImages.length === 0) return;
+
+      let validIndex = Math.min(validImages.length - 1, Math.max(0, index));
+      drawCover(validImages[validIndex]);
+    }
+
+    function animate() {
+      const validCount = images.filter(img => img && img.complete).length || 1;
+      const progress = getScrollProgress();
+      targetFrame = progress * (validCount - 1);
+
+      currentFrame += (targetFrame - currentFrame) * 0.15;
+      renderFrame(Math.round(currentFrame));
+
+      requestAnimationFrame(animate);
+    }
+
+    resizeCanvas();
+    loadFrames();
+    requestAnimationFrame(animate);
+
+
+    /* =========================================================
+       2. DYNAMIC CONTENT & FALLBACK DATA RENDERER
+       ========================================================= */
+    const DEFAULT_CONTENT = {
+      developer: {
+        name: "Ummu Salma Hasmy",
+        role: "SOFTWARE ENGINEERING UNDERGRADUATE",
+        status: "4TH YEAR @ SLIIT · OPEN TO OPPORTUNITIES"
+      },
+      hero: {
+        titleMain: "CREATIVE",
+        titleSub: "SOFTWARE ENGINEER",
+        titleScript: "Portfolio",
+        tagline: "4th-Year Software Engineering Undergraduate @ SLIIT with hands-on experience in full-stack web applications, microservices architecture, cross-platform mobile apps, cloud deployment, and scalable backend systems.",
+        codeTag: "</ SOFTWARE ENGINEERING . FULL-STACK . MOBILE . CLOUD & DEVOPS />",
+        badge: "4TH YEAR @ SLIIT · OPEN FOR ROLES"
+      },
+      experience: {
+        sectionTag: "CAREER JOURNEY",
+        title: "WORK EXPERIENCE ✦",
+        items: [
+          {
+            id: "01",
+            role: "Associate Web Developer",
+            company: "Premier Forex Limited",
+            employmentType: "Part-time · Remote",
+            period: "Jan 2025 - Apr 2026 · 1 yr 4 mos",
+            description: "Supported the development and maintenance of an internal web-based back-office application, working on frontend and backend enhancements, validation logic, reporting, documentation, and integration-support features in a production environment.",
+            skills: ["PHP", "MySQL", "JavaScript", "REST APIs", "Backend Validation Logic", "Internal Reporting"]
+          }
+        ]
+      },
+      education: {
+        sectionTag: "ACADEMIC BACKGROUND",
+        title: "EDUCATION ✦",
+        items: [
+          {
+            id: "01",
+            institution: "SLIIT",
+            fullName: "Sri Lanka Institute of Information Technology",
+            degree: "Bachelor of Science - BS, Information Technology - Software Engineering",
+            period: "May 2023 – May 2027",
+            description: "Specializing in Software Engineering principles, Microservices Architecture, Full-Stack Web Development, Mobile Engineering, Cloud Infrastructure, and Distributed Systems.",
+            skills: ["React.js", "React Native", "JavaScript", "Software Architecture", "Microservices", "Docker", "Kubernetes", "Firebase", "Node.js", "MongoDB"]
+          },
+          {
+            id: "02",
+            institution: "St. Mary's Convent",
+            fullName: "St. Mary's Convent",
+            degree: "School Education",
+            period: "Jan 2008 – Feb 2022",
+            description: "Completed secondary school education with strong foundations in science, mathematics, and collaborative leadership activities.",
+            skills: ["Foundational Mathematics", "Science", "Teamwork & Leadership"]
+          }
+        ]
+      },
+      whatIDo: {
+        sectionTag: "MY EXPERTISE",
+        title: "WHAT I BUILD ✦",
+        description: "I build robust web & mobile applications, microservice architectures, and modern digital platforms with clean code and cloud integration.",
+        services: [
+          { id: "01", icon: "code-slash", title: "FULL-STACK & MOBILE DEVELOPMENT", description: "Building modern full-stack web & cross-platform mobile applications using React.js, React Native, Node.js, PHP, and MongoDB/MySQL." },
+          { id: "02", icon: "brackets", title: "MICROSERVICES & ARCHITECTURE", description: "Designing modular microservices, RESTful API Gateways, service-to-service communication, and authentication systems." },
+          { id: "03", icon: "layers", title: "CLOUD & CONTAINERIZATION", description: "Containerizing services with Docker, orchestrating with Kubernetes, and hosting backends on Azure Virtual Machines." },
+          { id: "04", icon: "lightning", title: "REAL-TIME & 3RD-PARTY APIs", description: "Integrating Firebase real-time chat, Gemini AI API, Stripe payment gateway, OCR prescription reading, and location services." }
+        ]
+      },
+      projects: {
+        sectionTag: "PORTFOLIO WORK",
+        title: "FEATURED PROJECTS ✦",
+        items: [
+          {
+            id: "01",
+            title: "SMART HEALTHCARE SYSTEM",
+            tagline: "Microservices-Based Smart Healthcare System",
+            associatedWith: "SLIIT Campus Group Project",
+            period: "2025",
+            category: "Microservices / Docker / Kubernetes / Azure VM / React / Node.js",
+            image: "./project_pics/smart_healthcare.jpg",
+            fallbackImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
+            liveUrl: "https://lnkd.in/gX6PRspV",
+            youtubeUrl: "https://lnkd.in/g-UbMU-C",
+            githubUrl: "",
+            badge: "MICROSERVICES & CLOUD",
+            description: "A digital platform connecting patients and doctors built on a 10-microservices architecture, containerized with Docker, orchestrated using Kubernetes, and deployed on an Azure Virtual Machine.",
+            keyFeatures: [
+              "10 Microservices: API Gateway, Auth, User, Doctor, Appointment, Payment, Notification, Prescription, Telemedicine, AI Symptom Checker",
+              "Docker Containerization: Independent service packaging for consistent environment execution",
+              "Kubernetes Orchestration: Pod management, service discovery, self-healing & deployment control",
+              "Azure Virtual Machine: Remote cloud server setup for production-grade backend hosting",
+              "Third-Party Integrations: Gemini AI API, Stripe payments, OCR prescription reading, Nodemailer, Twilio"
+            ],
+            techStack: ["React.js", "Node.js", "Docker", "Kubernetes", "Azure VM", "Gemini AI API", "Stripe", "OCR", "REST APIs"],
+            teammates: ["Dilmith Ranasinghe", "Yuhansi Pathiraja", "Ummu Salma Hasmy"]
+          },
+          {
+            id: "02",
+            title: "LOCALLOOP",
+            tagline: "Hyperlocal Community Marketplace Mobile App (SDG Goal 08)",
+            associatedWith: "SLIIT · SE3050 User Experience Engineering",
+            period: "Jun 2025 – Nov 2025",
+            category: "React Native / Firebase / Geolocation / Mobile UX",
+            image: "./project_pics/localloop.jpg",
+            fallbackImage: "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?auto=format&fit=crop&w=1200&q=80",
+            liveUrl: "",
+            youtubeUrl: "",
+            githubUrl: "https://github.com/Dilmith-Ranasinghe518/LocalLoop",
+            badge: "MOBILE APP (SDG 8)",
+            description: "A cross-platform mobile application developed for SE3050 User Experience Engineering to strengthen neighbourhood communities. Supports UN SDG 8 (Decent Work & Economic Growth) by empowering local creators and small businesses.",
+            keyFeatures: [
+              "Hyperlocal Marketplace: Browse, filter, search, and manage community listings",
+              "Location-Based Discovery: Geo-tagged posts showing items and events nearby",
+              "Real-Time Firebase Chat: Messaging with image uploads, voice notes & location sharing",
+              "Events & Flash Offers: Publish and discover local events, flash sales, and promotions",
+              "Gamified Community: User ratings, badges, and points to encourage positive local engagement"
+            ],
+            techStack: ["React Native", "Firebase Auth", "Firestore", "Firebase Storage", "Context API", "Geolocation & Maps", "GitHub"],
+            teammates: ["Dilmith Ranasinghe", "Ummu Salma Hasmy"]
+          },
+          {
+            id: "03",
+            title: "TRAVELAURA",
+            tagline: "Travel & Explore Management System (MERN Stack)",
+            associatedWith: "SLIIT Campus Project",
+            period: "Aug 2025 – Oct 2025",
+            category: "React.js / Node.js / Express / MongoDB / Jira / Slack",
+            image: "./project_pics/travelaura.jpg",
+            fallbackImage: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80",
+            liveUrl: "",
+            youtubeUrl: "",
+            githubUrl: "https://github.com/Dilmith-Ranasinghe518/TravelAura",
+            badge: "FULL-STACK MERN",
+            description: "A full-stack Travel & Explore Management System developed using the MERN stack with Agile workflows (Jira & Slack) to streamline destination, accommodation, event, and blog management.",
+            keyFeatures: [
+              "Destination & Accommodation Modules: Manage hotel listings, facilities, pricing, and travel destinations",
+              "Events & Blogs Management: Real-time event module, blog engine, user reviews & likes",
+              "Admin Analytics Dashboard: Real-time insights using interactive charts, stats & report exports",
+              "Secure Payments & Media: Stripe payment gateway integration and secure image upload module",
+              "Agile Workflow & Risk Management: Sprint planning via Jira, Slack coordination & SWOT risk analysis"
+            ],
+            techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Stripe API", "REST APIs", "Jira", "Slack", "GitHub"],
+            teammates: ["Dilmith Ranasinghe", "Ummu Salma Hasmy"]
+          },
+          {
+            id: "04",
+            title: "AI PRESCRIPTION SCANNER & HEALTH CHECKER",
+            tagline: "AI-Powered Optical Prescription & Medical Assistant",
+            associatedWith: "SLIIT Campus AI Innovation Project",
+            period: "2025",
+            category: "Gemini AI API / OCR / React Native / Node.js",
+            image: "./project_pics/smart_healthcare.jpg",
+            fallbackImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
+            liveUrl: "",
+            youtubeUrl: "",
+            githubUrl: "https://github.com/ummusalma/AI-Prescription-Scanner",
+            badge: "AI & COMPUTER VISION",
+            description: "An intelligent medical assistant capable of scanning handwritten prescriptions, parsing dosage instructions via OCR & Gemini AI, and cross-checking drug interactions.",
+            keyFeatures: [
+              "Handwritten Prescription Parsing: Automated OCR extraction of doctor signatures and medicine lists",
+              "Gemini AI Consultation: Real-time symptom checking and preliminary health advice",
+              "Drug Interaction Warnings: Automatic alert system when multiple conflicting medicines are prescribed",
+              "Multi-Language Support: Translation of complex medical instructions into plain English & local languages"
+            ],
+            techStack: ["React Native", "Node.js", "Gemini AI API", "OCR Engine", "Express.js"],
+            teammates: ["Ummu Salma Hasmy"]
+          },
+          {
+            id: "05",
+            title: "AZURE CLOUD & DEVOPS PIPELINE",
+            tagline: "Production-Grade Kubernetes & CI/CD Infrastructure",
+            associatedWith: "Cloud Architecture Lab",
+            period: "2025",
+            category: "Docker / Kubernetes / Azure VM / GitHub Actions / Shell",
+            image: "./project_pics/smart_healthcare.jpg",
+            fallbackImage: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=1200&q=80",
+            liveUrl: "",
+            youtubeUrl: "",
+            githubUrl: "https://github.com/ummusalma/Cloud-DevOps-Pipeline",
+            badge: "CLOUD & DEVOPS",
+            description: "Automated deployment pipeline and cluster orchestration for enterprise microservices hosted on Azure Virtual Machines with self-healing Kubernetes pods.",
+            keyFeatures: [
+              "CI/CD Pipeline: GitHub Actions workflow for automated container build, test, and push",
+              "Kubernetes Ingress: NGINX ingress routing with SSL termination and load balancing",
+              "Infrastructure Monitoring: Prometheus & Grafana dashboard for real-time cluster metrics",
+              "Automated Rollbacks: Zero-downtime rolling updates and automated rollbacks on health check failure"
+            ],
+            techStack: ["Docker", "Kubernetes", "Azure VM", "GitHub Actions", "Nginx", "Prometheus"],
+            teammates: ["Ummu Salma Hasmy"]
+          }
+        ]
+      },
+      toolkit: {
+        title: "TECH STACK & TOOLS",
+        tools: [
+          { name: "React.js / React Native", icon: "react" },
+          { name: "JavaScript (ES6+)", icon: "js" },
+          { name: "Node.js & Express", icon: "nodejs" },
+          { name: "PHP & MySQL", icon: "php" },
+          { name: "MongoDB & Firestore", icon: "db" },
+          { name: "Docker Containerization", icon: "docker" },
+          { name: "Kubernetes Orchestration", icon: "k8s" },
+          { name: "Azure Virtual Machines", icon: "azure" },
+          { name: "Firebase Auth & Storage", icon: "firebase" },
+          { name: "Stripe & Gemini AI APIs", icon: "api" },
+          { name: "Jira & Slack (Agile)", icon: "agile" },
+          { name: "Git & GitHub Workflow", icon: "git" }
+        ]
+      },
+      workProcess: {
+        title: "DEVELOPMENT PROCESS",
+        steps: [
+          { number: "01", title: "REQUIREMENTS & UX RESEARCH", description: "User-centered design, persona building, sprint backlogs in Jira, and architecture scoping." },
+          { number: "02", title: "FULL-STACK & MOBILE ENGINEERING", description: "Building responsive web UIs, cross-platform mobile apps, REST APIs, and database schemas." },
+          { number: "03", title: "CLOUD, DEVOPS & REAL-TIME INTEGRATIONS", description: "Docker containerization, Kubernetes pod orchestration, Azure VM hosting, and Firebase real-time data sync." },
+          { number: "04", title: "TESTING, AGILE SWAP & LAUNCH", description: "SWOT risk management, user testing, performance optimization, and Git-driven deployment." }
+        ]
+      },
+      cta: {
+        title: "WANT TO COLLABORATE OR DISCUSS OPPORTUNITIES? LET'S CONNECT. ✦",
+        subtitle: "Available for full-time graduate opportunities, part-time web development & collaborative software engineering projects.",
+        buttonText: "GET IN TOUCH",
+        buttonLink: "https://wa.me/94758414963"
+      },
+      contact: {
+        title: "LET'S CONNECT",
+        email: "ummusalmahasmy.com",
+        whatsappNumber: "+94758414963",
+        socials: [
+          { name: "LinkedIn", url: "https://www.linkedin.com/in/ummu-salma-hasmy-2525912a6" },
+          { name: "GitHub", url: "https://github.com/ushasmy" },
+          { name: "Instagram", url: "https://www.instagram.com/ush715202/?hl=en" },
+          { name: "Email", url: "mailto:ummusalmahasmy.com" }
+        ]
+      }
+    };
+
+    function renderPortfolioUI(data) {
+      if (!data) return;
+
+      // Developer Name Info
+      if (data.developer) {
+        const nameUpper = (data.developer.name || 'UMMU SALMA HASMY').toUpperCase();
+        const navName = document.getElementById('nav-dev-name');
+        const headerName = document.getElementById('dev-header-name');
+        const footerName = document.getElementById('footer-dev-name');
+
+        if (navName) navName.innerText = nameUpper;
+        if (headerName) headerName.innerText = nameUpper;
+        if (footerName) footerName.innerText = nameUpper;
+      }
+
+      // Hero Data
+      if (data.hero) {
+        const titleSub = document.getElementById('title-sub');
+        const titleScript = document.getElementById('title-script');
+        const heroTagline = document.getElementById('hero-tagline');
+        const heroCodeTag = document.getElementById('hero-code-tag');
+
+        if (titleSub) titleSub.innerText = data.hero.titleSub || 'SOFTWARE ENGINEER';
+        if (titleScript) titleScript.innerText = data.hero.titleScript || 'Portfolio';
+        if (heroTagline) heroTagline.innerText = data.hero.tagline || '';
+        if (heroCodeTag) heroCodeTag.innerText = data.hero.codeTag || '';
+      }
+
+      // Experience Data
+      if (data.experience) {
+        const expTag = document.getElementById('exp-tag');
+        const expTitle = document.getElementById('exp-title');
+
+        if (expTag) expTag.innerText = data.experience.sectionTag || 'CAREER JOURNEY';
+        if (expTitle) expTitle.innerText = data.experience.title || 'WORK EXPERIENCE ✦';
+
+        const expContainer = document.getElementById('experience-container');
+        if (expContainer && data.experience.items) {
+          expContainer.innerHTML = data.experience.items.map(item => `
+            <div class="glass-card timeline-card">
+              <div class="timeline-card-header">
+                <div>
+                  <div class="timeline-title">${item.role}</div>
+                  <div class="timeline-subtitle">${item.company}</div>
+                </div>
+                <div class="timeline-badge"><i data-lucide="calendar"></i> ${item.period}</div>
+              </div>
+              <div style="margin-bottom: 6px;"><span class="timeline-badge">${item.employmentType}</span></div>
+              <p class="timeline-desc">${item.description}</p>
+              <div class="pill-tags">
+                ${(item.skills || []).map(skill => `<span class="skill-pill">${skill}</span>`).join('')}
+              </div>
+            </div>
+          `).join('');
+        }
+      }
+
+      // Education Data
+      if (data.education) {
+        const eduTag = document.getElementById('edu-tag');
+        const eduTitle = document.getElementById('edu-title');
+
+        if (eduTag) eduTag.innerText = data.education.sectionTag || 'ACADEMIC BACKGROUND';
+        if (eduTitle) eduTitle.innerText = data.education.title || 'EDUCATION ✦';
+
+        const eduContainer = document.getElementById('education-container');
+        if (eduContainer && data.education.items) {
+          eduContainer.innerHTML = data.education.items.map(item => `
+            <div class="glass-card timeline-card" style="border-left-color: var(--accent-orange-light);">
+              <div class="timeline-card-header">
+                <div>
+                  <div class="timeline-title">${item.institution}</div>
+                  <div class="timeline-subtitle" style="font-size: 0.88rem; color: #fff;">${item.degree}</div>
+                </div>
+                <div class="timeline-badge"><i data-lucide="graduation-cap"></i> ${item.period}</div>
+              </div>
+              <p class="timeline-desc" style="margin-top: 8px;">${item.description}</p>
+              <div class="pill-tags">
+                ${(item.skills || []).map(skill => `<span class="skill-pill">${skill}</span>`).join('')}
+              </div>
+            </div>
+          `).join('');
+        }
+      }
+
+      // What I Do Data
+      if (data.whatIDo) {
+        const servicesTag = document.getElementById('services-tag');
+        const servicesTitle = document.getElementById('services-title');
+        const servicesDesc = document.getElementById('services-desc');
+
+        if (servicesTag) servicesTag.innerText = data.whatIDo.sectionTag || 'MY EXPERTISE';
+        if (servicesTitle) servicesTitle.innerText = data.whatIDo.title || 'WHAT I BUILD ✦';
+        if (servicesDesc) servicesDesc.innerText = data.whatIDo.description || '';
+
+        const servicesContainer = document.getElementById('services-container');
+        if (servicesContainer && data.whatIDo.services) {
+          servicesContainer.innerHTML = data.whatIDo.services.map(service => `
+            <div class="glass-card service-card">
+              <div>
+                <div class="service-icon"><i data-lucide="${getLucideIcon(service.icon)}"></i></div>
+                <h3 class="service-title">${service.title}</h3>
+                <p class="service-desc">${service.description}</p>
+              </div>
+              <div class="service-num">${service.id}</div>
+            </div>
+          `).join('');
+        }
+      }
+
+      // Projects Data (Top 3 for Main Page, Accordion for Modal)
+      if (data.projects) {
+        const projectsTag = document.getElementById('projects-tag');
+        const projectsTitle = document.getElementById('projects-title');
+
+        if (projectsTag) projectsTag.innerText = data.projects.sectionTag || 'PORTFOLIO WORK';
+        if (projectsTitle) projectsTitle.innerText = data.projects.title || 'FEATURED PROJECTS ✦';
+
+        const allItems = data.projects.items || [];
+        const featuredItems = allItems.slice(0, 3);
+
+        const countBadge = document.getElementById('projects-count-badge');
+        const modalCountBadge = document.getElementById('modal-project-count');
+        if (countBadge) countBadge.innerText = allItems.length;
+        if (modalCountBadge) modalCountBadge.innerText = allItems.length;
+
+        // Render full featured card for main page
+        const renderCard = (p) => {
+          const imgSrc = p.image || p.fallbackImage;
+          const fallbackAttr = p.fallbackImage ? `onerror="this.onerror=null; this.src='${p.fallbackImage}';"` : '';
+
+          return `
+            <div class="glass-card project-card-full">
+              <div class="project-thumb-box">
+                <img src="${imgSrc}" ${fallbackAttr} alt="${p.title}" class="project-thumb-img">
+              </div>
+
+              <div class="project-body-full">
+                <div>
+                  <div class="project-top-row">
+                    <div>
+                      <span class="project-badge-tag">${p.badge || 'FEATURED PROJECT'}</span>
+                      <h3 class="project-main-title">${p.title}</h3>
+                      <div class="project-tagline">${p.tagline}</div>
+                      ${p.associatedWith ? `<div class="project-association">${p.associatedWith} ${p.period ? '· ' + p.period : ''}</div>` : ''}
+                    </div>
+
+                    <div class="project-actions">
+                      ${p.liveUrl ? `<a href="${p.liveUrl}" target="_blank" class="btn-action btn-primary"><i data-lucide="external-link"></i> Live Demo</a>` : ''}
+                      ${p.githubUrl ? `<a href="${p.githubUrl}" target="_blank" class="btn-action btn-secondary"><i data-lucide="github"></i> GitHub</a>` : ''}
+                      ${p.youtubeUrl ? `<a href="${p.youtubeUrl}" target="_blank" class="btn-action btn-secondary"><i data-lucide="video"></i> Demo Video</a>` : ''}
+                    </div>
+                  </div>
+
+                  <p class="project-desc-text">${p.description}</p>
+
+                  ${(p.keyFeatures && p.keyFeatures.length > 0) ? `
+                    <ul class="project-features-list">
+                      ${p.keyFeatures.map(feat => `<li><i data-lucide="check-circle-2"></i> ${feat}</li>`).join('')}
+                    </ul>
+                  ` : ''}
+                </div>
+
+                <div class="project-footer-row">
+                  <div class="pill-tags">
+                    ${(p.techStack || []).map(t => `<span class="skill-pill">${t}</span>`).join('')}
+                  </div>
+
+                  ${(p.teammates && p.teammates.length > 0) ? `
+                    <div class="team-meta">
+                      <i data-lucide="users"></i> Team: ${p.teammates.join(', ')}
+                    </div>
+                  ` : ''}
+                </div>
+              </div>
+            </div>
+          `;
+        };
+
+        // Render accordion card for modal with full details
+        const renderAccordionItem = (p, index) => {
+          const imgSrc = p.image || p.fallbackImage;
+          const fallbackAttr = p.fallbackImage ? `onerror="this.onerror=null; this.src='${p.fallbackImage}';"` : '';
+
+          return `
+            <div class="project-accordion-item ${index === 0 ? 'active' : ''}">
+              <div class="project-accordion-header">
+                <div class="accordion-title-group">
+                  <div class="accordion-badge-title">
+                    <span class="project-badge-tag">${p.badge || 'PROJECT'}</span>
+                    <h3 class="accordion-project-title">${p.title}</h3>
+                  </div>
+                  <div class="accordion-tagline">${p.tagline} ${p.period ? '· ' + p.period : ''}</div>
+                </div>
+                <div class="accordion-header-right">
+                  <div class="accordion-toggle-icon">
+                    <i data-lucide="chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-accordion-body">
+                <div class="accordion-detail-card">
+                  <div class="accordion-detail-grid">
+                    <div class="accordion-thumb-box">
+                      <img src="${imgSrc}" ${fallbackAttr} alt="${p.title}" class="accordion-thumb-img">
+                    </div>
+
+                    <div class="accordion-detail-content">
+                      <div class="project-top-row">
+                        <div>
+                          <span class="project-badge-tag" style="margin-bottom: 6px; display: inline-block;">${p.badge || 'PROJECT'}</span>
+                          <h3 class="project-main-title" style="font-size: 1.45rem;">${p.title}</h3>
+                          <div class="project-tagline" style="font-size: 0.95rem; margin-top: 2px;">${p.tagline}</div>
+                          ${p.associatedWith ? `<div class="project-association">${p.associatedWith} ${p.period ? '· ' + p.period : ''}</div>` : ''}
+                        </div>
+
+                        <div class="project-actions">
+                          ${p.liveUrl ? `<a href="${p.liveUrl.startsWith('http') ? p.liveUrl : 'https://' + p.liveUrl}" target="_blank" class="btn-action btn-primary"><i data-lucide="external-link"></i> Live Demo</a>` : ''}
+                          ${p.githubUrl ? `<a href="${p.githubUrl.startsWith('http') ? p.githubUrl : 'https://' + p.githubUrl}" target="_blank" class="btn-action btn-secondary"><i data-lucide="github"></i> GitHub</a>` : ''}
+                          ${p.youtubeUrl ? `<a href="${p.youtubeUrl.startsWith('http') ? p.youtubeUrl : 'https://' + p.youtubeUrl}" target="_blank" class="btn-action btn-secondary"><i data-lucide="video"></i> Demo Video</a>` : ''}
+                        </div>
+                      </div>
+
+                      <p class="project-desc-text" style="font-size: 0.95rem; line-height: 1.6; margin: 12px 0 16px 0;">${p.description}</p>
+
+                      ${(p.keyFeatures && p.keyFeatures.length > 0) ? `
+                        <div style="margin-bottom: 16px;">
+                          <h4 style="font-size: 0.82rem; color: var(--accent-orange-light); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px;">KEY FEATURES & ARCHITECTURE:</h4>
+                          <ul class="project-features-list">
+                            ${p.keyFeatures.map(feat => `<li><i data-lucide="check-circle-2"></i> ${feat}</li>`).join('')}
+                          </ul>
+                        </div>
+                      ` : ''}
+
+                      <div class="project-footer-row" style="margin-top: 10px; padding-top: 14px;">
+                        <div>
+                          <div class="pill-tags">
+                            ${(p.techStack || []).map(t => `<span class="skill-pill">${t}</span>`).join('')}
+                          </div>
+                        </div>
+
+                        ${(p.teammates && p.teammates.length > 0) ? `
+                          <div class="team-meta">
+                            <i data-lucide="users"></i> Team: ${p.teammates.join(', ')}
+                          </div>
+                        ` : ''}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        };
+
+        const projectsContainer = document.getElementById('projects-container');
+        if (projectsContainer) {
+          projectsContainer.innerHTML = featuredItems.map(renderCard).join('');
+        }
+
+        const modalProjectsContainer = document.getElementById('modal-projects-container');
+        if (modalProjectsContainer) {
+          modalProjectsContainer.innerHTML = allItems.map((p, idx) => renderAccordionItem(p, idx)).join('');
+
+          modalProjectsContainer.querySelectorAll('.project-accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+              const item = header.closest('.project-accordion-item');
+              item.classList.toggle('active');
+            });
+          });
+        }
+      }
+
+      // Toolkit Data
+      if (data.toolkit) {
+        const toolkitTitle = document.getElementById('toolkit-title');
+        if (toolkitTitle) toolkitTitle.innerText = data.toolkit.title || 'TECH STACK & TOOLS';
+
+        const toolkitContainer = document.getElementById('toolkit-container');
+        if (toolkitContainer && data.toolkit.tools) {
+          toolkitContainer.innerHTML = data.toolkit.tools.map(tool => `
+            <div class="tool-item">
+              <div class="tool-name">${tool.name}</div>
+            </div>
+          `).join('');
+        }
+      }
+
+      // Work Process Data
+      if (data.workProcess) {
+        const processTitle = document.getElementById('process-title');
+        if (processTitle) processTitle.innerText = data.workProcess.title || 'DEVELOPMENT PROCESS';
+
+        const processContainer = document.getElementById('process-container');
+        if (processContainer && data.workProcess.steps) {
+          processContainer.innerHTML = data.workProcess.steps.map(step => `
+            <div class="process-step">
+              <div class="process-num-badge">${step.number}</div>
+              <div class="process-step-content">
+                <h4>${step.title}</h4>
+                <p>${step.description}</p>
+              </div>
+            </div>
+          `).join('');
+        }
+      }
+
+      // CTA Data with WhatsApp Direct Link
+      if (data.cta) {
+        const ctaTitle = document.getElementById('cta-title');
+        const ctaSubtitle = document.getElementById('cta-subtitle');
+        const ctaBtn = document.getElementById('cta-btn');
+
+        if (ctaTitle) ctaTitle.innerText = data.cta.title || '';
+        if (ctaSubtitle) ctaSubtitle.innerText = data.cta.subtitle || '';
+        if (ctaBtn) {
+          const waNum = data.contact?.whatsappNumber ? data.contact.whatsappNumber.replace(/[^0-9]/g, '') : '94770000000';
+          const waUrl = data.cta.buttonLink && data.cta.buttonLink.startsWith('http') ? data.cta.buttonLink : `https://wa.me/${waNum}`;
+          
+          ctaBtn.innerHTML = `GET IN TOUCH <i data-lucide="message-circle"></i>`;
+          ctaBtn.href = waUrl;
+          ctaBtn.target = "_blank";
+        }
+      }
+
+      // Contact Data with Social Links
+      if (data.contact) {
+        const socialsContainer = document.getElementById('socials-container');
+        if (socialsContainer && data.contact.socials) {
+          socialsContainer.innerHTML = data.contact.socials.map(soc => {
+            let targetUrl = soc.url || '#';
+            if (targetUrl.startsWith('www.')) targetUrl = 'https://' + targetUrl;
+            return `<a href="${targetUrl}" target="_blank">${soc.name}</a>`;
+          }).join('');
+        }
+      }
+
+      // Initialize Lucide Icons after dynamic injection
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+
+    async function loadPortfolioContent() {
+      try {
+        const response = await fetch('./content.json?t=' + Date.now());
+        if (response.ok) {
+          const data = await response.json();
+          renderPortfolioUI(data);
+        } else {
+          console.error('Failed to load content.json:', response.statusText);
+        }
+      } catch (err) {
+        console.error('Error fetching content.json:', err);
+      }
+    }
+
+    function getLucideIcon(iconName) {
+      const mapping = {
+        'code-slash': 'code-2',
+        'brackets': 'terminal',
+        'layers': 'layers',
+        'lightning': 'zap'
+      };
+      return mapping[iconName] || 'sparkles';
+    }
+
+    /* =========================================================
+       3. MODAL & NAVIGATION ENGINE CONTROLLERS
+       ========================================================= */
+    const openModalBtn = document.getElementById('open-all-projects-btn');
+    const closeModalBtn = document.getElementById('close-projects-modal');
+    const projectsModal = document.getElementById('projects-modal');
+
+    function openProjectsModal() {
+      if (projectsModal) {
+        projectsModal.classList.add('open');
+        projectsModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeProjectsModal() {
+      if (projectsModal) {
+        projectsModal.classList.remove('open');
+        projectsModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+    }
+
+    if (openModalBtn) openModalBtn.addEventListener('click', openProjectsModal);
+    if (closeModalBtn) closeModalBtn.addEventListener('click', closeProjectsModal);
+
+    if (projectsModal) {
+      projectsModal.addEventListener('click', (e) => {
+        if (e.target === projectsModal) closeProjectsModal();
+      });
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && projectsModal && projectsModal.classList.contains('open')) {
+        closeProjectsModal();
+      }
+    });
+
+    // Mobile Navigation Menu Toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+      });
+    }
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navMenu) navMenu.classList.remove('active');
+      });
+    });
+
+    // Highlight active section link on scroll
+    const navSections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let currentSectionId = '';
+      const scrollPos = window.pageYOffset + 220;
+
+      navSections.forEach(sec => {
+        const secTop = sec.offsetTop;
+        const secHeight = sec.offsetHeight;
+        if (scrollPos >= secTop && scrollPos < secTop + secHeight) {
+          currentSectionId = sec.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSectionId}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Render initial UI immediately so page is never empty
+    renderPortfolioUI(DEFAULT_CONTENT);
+
+    // Fetch and render portfolio UI dynamically from content.json
+    loadPortfolioContent();
+  </script>
+</body>
+
+</html>

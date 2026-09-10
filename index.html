@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ummu Salma — Software Engineering Portfolio</title>
+  <title>Sophia Martinez — Software Engineering Portfolio</title>
 
   <!-- Modern Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Outfit:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fira+Code:wght@500;600;700&family=JetBrains+Mono:wght@600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
     rel="stylesheet">
 
   <!-- Lucide Icons -->
@@ -34,7 +34,7 @@
     <nav>
       <div class="nav-brand">
         <a href="#hero" class="nav-logo-link">
-          <span class="nav-name" id="nav-dev-name">UMMU SALMA HASMY</span>
+          <span class="nav-name" id="nav-dev-name">SOPHIA MARTINEZ</span>
         </a>
       </div>
 
@@ -54,9 +54,9 @@
 
     <!-- HERO SECTION -->
     <section class="hero-section" id="hero">
-      <div>
+      <div class="hero-left">
         <h1 class="dev-name-title">
-          HI, I'M <span class="name-highlight" id="dev-header-name">UMMU SALMA HASMY</span>
+          HI, I'M <span class="name-highlight" id="dev-header-name">SOPHIA MARTINEZ</span>
         </h1>
         <div style="display: flex; align-items: center; flex-wrap: wrap;">
           <span class="hero-title-sub" id="title-sub">SOFTWARE ENGINEER</span>
@@ -64,9 +64,9 @@
         </div>
       </div>
 
-      <div class="hero-sub-row">
+      <div class="hero-right">
         <div class="hero-tagline-box">
-          <p class="hero-tagline" id="hero-tagline">4th-Year Software Engineering Undergraduate @ SLIIT with hands-on experience in full-stack web applications, microservices architecture, cross-platform mobile apps, cloud deployment, and scalable backend systems.</p>
+          <p class="hero-tagline" id="hero-tagline">4th-Year Computer Science & Software Engineering Undergraduate with hands-on experience in full-stack web applications, microservices architecture, cross-platform mobile apps, cloud deployment, and scalable backend systems.</p>
           <p class="hero-code-tag" id="hero-code-tag">&lt;/ SOFTWARE ENGINEERING . FULL-STACK . MOBILE . CLOUD &amp; DEVOPS /&gt;</p>
         </div>
       </div>
@@ -170,13 +170,13 @@
           <h2 id="cta-title">WANT TO COLLABORATE OR DISCUSS OPPORTUNITIES? LET'S CONNECT. ✦</h2>
           <p id="cta-subtitle">Available for full-time graduate opportunities, part-time web development & collaborative software engineering projects.</p>
         </div>
-        <a href="https://wa.me/94758414963" target="_blank" class="cta-btn" id="cta-btn">GET IN TOUCH <i data-lucide="message-circle"></i></a>
+        <a href="https://wa.me/1234567890" target="_blank" class="cta-btn" id="cta-btn">GET IN TOUCH <i data-lucide="message-circle"></i></a>
       </div>
     </section>
 
     <!-- FOOTER / CONTACT -->
     <footer id="contact">
-      <div class="footer-brand" id="footer-dev-name">UMMU SALMA HASMY</div>
+      <div class="footer-brand" id="footer-dev-name">SOPHIA MARTINEZ</div>
       <div class="social-links" id="socials-container">
         <!-- Dynamically Rendered -->
       </div>
@@ -261,7 +261,15 @@
       const nw = iw * scale;
       const nh = ih * scale;
       const cx = (cw - nw) / 2;
-      const cy = (ch - nh) / 2;
+      
+      // Prevent upper head/face from cutting off at top of screen
+      let cy = 0;
+      if (nh > ch) {
+        // Top-align image so upper part (head, face) is fully visible without top clipping
+        cy = 0;
+      } else {
+        cy = (ch - nh) / 2;
+      }
 
       ctx.clearRect(0, 0, cw, ch);
       ctx.drawImage(img, cx, cy, nw, nh);
@@ -296,17 +304,17 @@
        ========================================================= */
     const DEFAULT_CONTENT = {
       developer: {
-        name: "Ummu Salma Hasmy",
+        name: "Sophia Martinez",
         role: "SOFTWARE ENGINEERING UNDERGRADUATE",
-        status: "4TH YEAR @ SLIIT · OPEN TO OPPORTUNITIES"
+        status: "4TH YEAR @ TECH UNIVERSITY · OPEN TO OPPORTUNITIES"
       },
       hero: {
         titleMain: "CREATIVE",
         titleSub: "SOFTWARE ENGINEER",
         titleScript: "Portfolio",
-        tagline: "4th-Year Software Engineering Undergraduate @ SLIIT with hands-on experience in full-stack web applications, microservices architecture, cross-platform mobile apps, cloud deployment, and scalable backend systems.",
+        tagline: "4th-Year Computer Science & Software Engineering Undergraduate with hands-on experience in full-stack web applications, microservices architecture, cross-platform mobile apps, cloud deployment, and scalable backend systems.",
         codeTag: "</ SOFTWARE ENGINEERING . FULL-STACK . MOBILE . CLOUD & DEVOPS />",
-        badge: "4TH YEAR @ SLIIT · OPEN FOR ROLES"
+        badge: "4TH YEAR @ TECH UNIV · OPEN FOR ROLES"
       },
       experience: {
         sectionTag: "CAREER JOURNEY",
@@ -314,11 +322,11 @@
         items: [
           {
             id: "01",
-            role: "Associate Web Developer",
-            company: "Premier Forex Limited",
+            role: "Associate Web Developer Intern",
+            company: "Apex Digital Labs",
             employmentType: "Part-time · Remote",
             period: "Jan 2025 - Apr 2026 · 1 yr 4 mos",
-            description: "Supported the development and maintenance of an internal web-based back-office application, working on frontend and backend enhancements, validation logic, reporting, documentation, and integration-support features in a production environment.",
+            description: "Supported the development and maintenance of an internal web application, working on frontend and backend enhancements, validation logic, reporting dashboards, and API integrations in a production environment.",
             skills: ["PHP", "MySQL", "JavaScript", "REST APIs", "Backend Validation Logic", "Internal Reporting"]
           }
         ]
@@ -329,21 +337,21 @@
         items: [
           {
             id: "01",
-            institution: "SLIIT",
-            fullName: "Sri Lanka Institute of Information Technology",
-            degree: "Bachelor of Science - BS, Information Technology - Software Engineering",
+            institution: "Tech University",
+            fullName: "State Institute of Technology",
+            degree: "Bachelor of Science - BS, Computer Science & Software Engineering",
             period: "May 2023 – May 2027",
             description: "Specializing in Software Engineering principles, Microservices Architecture, Full-Stack Web Development, Mobile Engineering, Cloud Infrastructure, and Distributed Systems.",
             skills: ["React.js", "React Native", "JavaScript", "Software Architecture", "Microservices", "Docker", "Kubernetes", "Firebase", "Node.js", "MongoDB"]
           },
           {
             id: "02",
-            institution: "St. Mary's Convent",
-            fullName: "St. Mary's Convent",
-            degree: "School Education",
-            period: "Jan 2008 – Feb 2022",
-            description: "Completed secondary school education with strong foundations in science, mathematics, and collaborative leadership activities.",
-            skills: ["Foundational Mathematics", "Science", "Teamwork & Leadership"]
+            institution: "City Central High",
+            fullName: "City Central Academy",
+            degree: "High School Diploma",
+            period: "Jan 2018 – Feb 2022",
+            description: "Completed secondary school education with strong foundations in mathematics, science, and collaborative technical projects.",
+            skills: ["Foundational Mathematics", "Computer Science", "Teamwork & Leadership"]
           }
         ]
       },
@@ -354,8 +362,8 @@
         services: [
           { id: "01", icon: "code-slash", title: "FULL-STACK & MOBILE DEVELOPMENT", description: "Building modern full-stack web & cross-platform mobile applications using React.js, React Native, Node.js, PHP, and MongoDB/MySQL." },
           { id: "02", icon: "brackets", title: "MICROSERVICES & ARCHITECTURE", description: "Designing modular microservices, RESTful API Gateways, service-to-service communication, and authentication systems." },
-          { id: "03", icon: "layers", title: "CLOUD & CONTAINERIZATION", description: "Containerizing services with Docker, orchestrating with Kubernetes, and hosting backends on Azure Virtual Machines." },
-          { id: "04", icon: "lightning", title: "REAL-TIME & 3RD-PARTY APIs", description: "Integrating Firebase real-time chat, Gemini AI API, Stripe payment gateway, OCR prescription reading, and location services." }
+          { id: "03", icon: "layers", title: "CLOUD & CONTAINERIZATION", description: "Containerizing services with Docker, orchestrating with Kubernetes, and hosting backends on Cloud Virtual Machines." },
+          { id: "04", icon: "lightning", title: "REAL-TIME & 3RD-PARTY APIs", description: "Integrating Firebase real-time chat, AI APIs, Stripe payment gateways, OCR reading engines, and location services." }
         ]
       },
       projects: {
@@ -364,42 +372,42 @@
         items: [
           {
             id: "01",
-            title: "SMART HEALTHCARE SYSTEM",
-            tagline: "Microservices-Based Smart Healthcare System",
-            associatedWith: "SLIIT Campus Group Project",
+            title: "NEXUS HEALTHCARE SYSTEM",
+            tagline: "Microservices-Based Healthcare Platform",
+            associatedWith: "University Group Innovation Project",
             period: "2025",
-            category: "Microservices / Docker / Kubernetes / Azure VM / React / Node.js",
+            category: "Microservices / Docker / Kubernetes / Cloud VM / React / Node.js",
             image: "./project_pics/smart_healthcare.jpg",
             fallbackImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
-            liveUrl: "https://lnkd.in/gX6PRspV",
-            youtubeUrl: "https://lnkd.in/g-UbMU-C",
-            githubUrl: "",
+            liveUrl: "https://example.com/demo-healthcare",
+            youtubeUrl: "https://youtube.com/watch?v=dummy-demo",
+            githubUrl: "https://github.com/sophia-martinez/nexus-healthcare",
             badge: "MICROSERVICES & CLOUD",
-            description: "A digital platform connecting patients and doctors built on a 10-microservices architecture, containerized with Docker, orchestrated using Kubernetes, and deployed on an Azure Virtual Machine.",
+            description: "A digital platform connecting patients and healthcare providers built on a 10-microservices architecture, containerized with Docker, orchestrated using Kubernetes, and deployed on cloud VMs.",
             keyFeatures: [
               "10 Microservices: API Gateway, Auth, User, Doctor, Appointment, Payment, Notification, Prescription, Telemedicine, AI Symptom Checker",
               "Docker Containerization: Independent service packaging for consistent environment execution",
               "Kubernetes Orchestration: Pod management, service discovery, self-healing & deployment control",
-              "Azure Virtual Machine: Remote cloud server setup for production-grade backend hosting",
-              "Third-Party Integrations: Gemini AI API, Stripe payments, OCR prescription reading, Nodemailer, Twilio"
+              "Cloud VM Infrastructure: Remote cloud server setup for production-grade backend hosting",
+              "Third-Party Integrations: AI API, Stripe payments, OCR prescription reading, Nodemailer, Twilio"
             ],
-            techStack: ["React.js", "Node.js", "Docker", "Kubernetes", "Azure VM", "Gemini AI API", "Stripe", "OCR", "REST APIs"],
-            teammates: ["Dilmith Ranasinghe", "Yuhansi Pathiraja", "Ummu Salma Hasmy"]
+            techStack: ["React.js", "Node.js", "Docker", "Kubernetes", "Cloud VM", "AI API", "Stripe", "OCR", "REST APIs"],
+            teammates: ["Sophia Martinez", "Chloe Bennett", "Jordan Lee"]
           },
           {
             id: "02",
-            title: "LOCALLOOP",
-            tagline: "Hyperlocal Community Marketplace Mobile App (SDG Goal 08)",
-            associatedWith: "SLIIT · SE3050 User Experience Engineering",
+            title: "METROCOMMUTE MOBILE",
+            tagline: "Hyperlocal Transit & Community Marketplace App",
+            associatedWith: "Mobile UX Engineering Project",
             period: "Jun 2025 – Nov 2025",
             category: "React Native / Firebase / Geolocation / Mobile UX",
             image: "./project_pics/localloop.jpg",
             fallbackImage: "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?auto=format&fit=crop&w=1200&q=80",
-            liveUrl: "",
-            youtubeUrl: "",
-            githubUrl: "https://github.com/Dilmith-Ranasinghe518/LocalLoop",
-            badge: "MOBILE APP (SDG 8)",
-            description: "A cross-platform mobile application developed for SE3050 User Experience Engineering to strengthen neighbourhood communities. Supports UN SDG 8 (Decent Work & Economic Growth) by empowering local creators and small businesses.",
+            liveUrl: "https://example.com/demo-metrocommute",
+            youtubeUrl: "https://youtube.com/watch?v=dummy-demo2",
+            githubUrl: "https://github.com/sophia-martinez/metrocommute-app",
+            badge: "MOBILE APP",
+            description: "A cross-platform mobile application developed to strengthen neighbourhood community interactions, local transit updates, and hyper-local marketplace connections.",
             keyFeatures: [
               "Hyperlocal Marketplace: Browse, filter, search, and manage community listings",
               "Location-Based Discovery: Geo-tagged posts showing items and events nearby",
@@ -408,77 +416,77 @@
               "Gamified Community: User ratings, badges, and points to encourage positive local engagement"
             ],
             techStack: ["React Native", "Firebase Auth", "Firestore", "Firebase Storage", "Context API", "Geolocation & Maps", "GitHub"],
-            teammates: ["Dilmith Ranasinghe", "Ummu Salma Hasmy"]
+            teammates: ["Sophia Martinez", "Chloe Bennett"]
           },
           {
             id: "03",
-            title: "TRAVELAURA",
-            tagline: "Travel & Explore Management System (MERN Stack)",
-            associatedWith: "SLIIT Campus Project",
+            title: "SYNAPSE TRAVEL ENGINE",
+            tagline: "Travel & Exploration Management System",
+            associatedWith: "Full-Stack Web Innovation",
             period: "Aug 2025 – Oct 2025",
             category: "React.js / Node.js / Express / MongoDB / Jira / Slack",
             image: "./project_pics/travelaura.jpg",
             fallbackImage: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80",
-            liveUrl: "",
-            youtubeUrl: "",
-            githubUrl: "https://github.com/Dilmith-Ranasinghe518/TravelAura",
+            liveUrl: "https://example.com/demo-synapse-travel",
+            youtubeUrl: "https://youtube.com/watch?v=dummy-demo3",
+            githubUrl: "https://github.com/sophia-martinez/synapse-travel",
             badge: "FULL-STACK MERN",
-            description: "A full-stack Travel & Explore Management System developed using the MERN stack with Agile workflows (Jira & Slack) to streamline destination, accommodation, event, and blog management.",
+            description: "A full-stack Travel & Exploration Management System developed using the MERN stack with Agile workflows to streamline destination, accommodation, event, and blog management.",
             keyFeatures: [
               "Destination & Accommodation Modules: Manage hotel listings, facilities, pricing, and travel destinations",
               "Events & Blogs Management: Real-time event module, blog engine, user reviews & likes",
               "Admin Analytics Dashboard: Real-time insights using interactive charts, stats & report exports",
               "Secure Payments & Media: Stripe payment gateway integration and secure image upload module",
-              "Agile Workflow & Risk Management: Sprint planning via Jira, Slack coordination & SWOT risk analysis"
+              "Agile Workflow & Risk Management: Sprint planning via Jira, Slack coordination & risk analysis"
             ],
             techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Stripe API", "REST APIs", "Jira", "Slack", "GitHub"],
-            teammates: ["Dilmith Ranasinghe", "Ummu Salma Hasmy"]
+            teammates: ["Sophia Martinez", "Chloe Bennett"]
           },
           {
             id: "04",
-            title: "AI PRESCRIPTION SCANNER & HEALTH CHECKER",
-            tagline: "AI-Powered Optical Prescription & Medical Assistant",
-            associatedWith: "SLIIT Campus AI Innovation Project",
+            title: "VISION SCAN AI",
+            tagline: "AI-Powered Optical Assistant & Scanner",
+            associatedWith: "AI Engineering Lab Project",
             period: "2025",
-            category: "Gemini AI API / OCR / React Native / Node.js",
+            category: "AI API / OCR / React Native / Node.js",
             image: "./project_pics/smart_healthcare.jpg",
             fallbackImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
-            liveUrl: "",
-            youtubeUrl: "",
-            githubUrl: "https://github.com/ummusalma/AI-Prescription-Scanner",
+            liveUrl: "https://example.com/demo-vision-scan",
+            youtubeUrl: "https://youtube.com/watch?v=dummy-demo4",
+            githubUrl: "https://github.com/sophia-martinez/vision-scan-ai",
             badge: "AI & COMPUTER VISION",
-            description: "An intelligent medical assistant capable of scanning handwritten prescriptions, parsing dosage instructions via OCR & Gemini AI, and cross-checking drug interactions.",
+            description: "An intelligent medical assistant capable of scanning handwritten documents, parsing text instructions via OCR & AI APIs, and generating automated summaries.",
             keyFeatures: [
-              "Handwritten Prescription Parsing: Automated OCR extraction of doctor signatures and medicine lists",
-              "Gemini AI Consultation: Real-time symptom checking and preliminary health advice",
-              "Drug Interaction Warnings: Automatic alert system when multiple conflicting medicines are prescribed",
-              "Multi-Language Support: Translation of complex medical instructions into plain English & local languages"
+              "Handwritten Text Parsing: Automated OCR extraction of text and structured data",
+              "AI Consultation: Real-time query checking and preliminary technical assistance",
+              "Conflict Warnings: Automatic alert system when conflicting parameters are detected",
+              "Multi-Language Support: Translation of complex technical instructions into plain text"
             ],
-            techStack: ["React Native", "Node.js", "Gemini AI API", "OCR Engine", "Express.js"],
-            teammates: ["Ummu Salma Hasmy"]
+            techStack: ["React Native", "Node.js", "AI API", "OCR Engine", "Express.js"],
+            teammates: ["Sophia Martinez"]
           },
           {
             id: "05",
-            title: "AZURE CLOUD & DEVOPS PIPELINE",
+            title: "CLOUD DEVOPS PIPELINE",
             tagline: "Production-Grade Kubernetes & CI/CD Infrastructure",
-            associatedWith: "Cloud Architecture Lab",
+            associatedWith: "Cloud Architecture Project",
             period: "2025",
-            category: "Docker / Kubernetes / Azure VM / GitHub Actions / Shell",
+            category: "Docker / Kubernetes / Cloud VM / GitHub Actions / Shell",
             image: "./project_pics/smart_healthcare.jpg",
             fallbackImage: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=1200&q=80",
-            liveUrl: "",
-            youtubeUrl: "",
-            githubUrl: "https://github.com/ummusalma/Cloud-DevOps-Pipeline",
+            liveUrl: "https://example.com/demo-devops-pipeline",
+            youtubeUrl: "https://youtube.com/watch?v=dummy-demo5",
+            githubUrl: "https://github.com/sophia-martinez/cloud-devops-pipeline",
             badge: "CLOUD & DEVOPS",
-            description: "Automated deployment pipeline and cluster orchestration for enterprise microservices hosted on Azure Virtual Machines with self-healing Kubernetes pods.",
+            description: "Automated deployment pipeline and cluster orchestration for enterprise microservices hosted on cloud virtual machines with self-healing Kubernetes pods.",
             keyFeatures: [
               "CI/CD Pipeline: GitHub Actions workflow for automated container build, test, and push",
               "Kubernetes Ingress: NGINX ingress routing with SSL termination and load balancing",
               "Infrastructure Monitoring: Prometheus & Grafana dashboard for real-time cluster metrics",
               "Automated Rollbacks: Zero-downtime rolling updates and automated rollbacks on health check failure"
             ],
-            techStack: ["Docker", "Kubernetes", "Azure VM", "GitHub Actions", "Nginx", "Prometheus"],
-            teammates: ["Ummu Salma Hasmy"]
+            techStack: ["Docker", "Kubernetes", "Cloud VM", "GitHub Actions", "Nginx", "Prometheus"],
+            teammates: ["Sophia Martinez"]
           }
         ]
       },
@@ -492,9 +500,9 @@
           { name: "MongoDB & Firestore", icon: "db" },
           { name: "Docker Containerization", icon: "docker" },
           { name: "Kubernetes Orchestration", icon: "k8s" },
-          { name: "Azure Virtual Machines", icon: "azure" },
+          { name: "Cloud Virtual Machines", icon: "azure" },
           { name: "Firebase Auth & Storage", icon: "firebase" },
-          { name: "Stripe & Gemini AI APIs", icon: "api" },
+          { name: "Stripe & AI APIs", icon: "api" },
           { name: "Jira & Slack (Agile)", icon: "agile" },
           { name: "Git & GitHub Workflow", icon: "git" }
         ]
@@ -502,27 +510,27 @@
       workProcess: {
         title: "DEVELOPMENT PROCESS",
         steps: [
-          { number: "01", title: "REQUIREMENTS & UX RESEARCH", description: "User-centered design, persona building, sprint backlogs in Jira, and architecture scoping." },
+          { number: "01", title: "REQUIREMENTS & UX RESEARCH", description: "User-centered design, persona building, sprint backlogs, and architecture scoping." },
           { number: "02", title: "FULL-STACK & MOBILE ENGINEERING", description: "Building responsive web UIs, cross-platform mobile apps, REST APIs, and database schemas." },
-          { number: "03", title: "CLOUD, DEVOPS & REAL-TIME INTEGRATIONS", description: "Docker containerization, Kubernetes pod orchestration, Azure VM hosting, and Firebase real-time data sync." },
-          { number: "04", title: "TESTING, AGILE SWAP & LAUNCH", description: "SWOT risk management, user testing, performance optimization, and Git-driven deployment." }
+          { number: "03", title: "CLOUD, DEVOPS & REAL-TIME INTEGRATIONS", description: "Docker containerization, Kubernetes pod orchestration, cloud hosting, and real-time data sync." },
+          { number: "04", title: "TESTING, AGILE SWAP & LAUNCH", description: "Risk management, user testing, performance optimization, and Git-driven deployment." }
         ]
       },
       cta: {
         title: "WANT TO COLLABORATE OR DISCUSS OPPORTUNITIES? LET'S CONNECT. ✦",
         subtitle: "Available for full-time graduate opportunities, part-time web development & collaborative software engineering projects.",
         buttonText: "GET IN TOUCH",
-        buttonLink: "https://wa.me/94758414963"
+        buttonLink: "https://wa.me/1234567890"
       },
       contact: {
         title: "LET'S CONNECT",
-        email: "ummusalmahasmy.com",
-        whatsappNumber: "+94758414963",
+        email: "sophia.martinez@example.com",
+        whatsappNumber: "+1 234 567 8900",
         socials: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/ummu-salma-hasmy-2525912a6" },
-          { name: "GitHub", url: "https://github.com/ushasmy" },
-          { name: "Instagram", url: "https://www.instagram.com/ush715202/?hl=en" },
-          { name: "Email", url: "mailto:ummusalmahasmy.com" }
+          { name: "LinkedIn", url: "https://linkedin.com/in/sophia-martinez-dev" },
+          { name: "GitHub", url: "https://github.com/sophia-martinez" },
+          { name: "Instagram", url: "https://instagram.com/sophia_martinez_dev" },
+          { name: "Email", url: "mailto:sophia.martinez@example.com" }
         ]
       }
     };
@@ -653,7 +661,7 @@
         if (countBadge) countBadge.innerText = allItems.length;
         if (modalCountBadge) modalCountBadge.innerText = allItems.length;
 
-        // Render full featured card for main page
+        // Render compact featured card for main page
         const renderCard = (p) => {
           const imgSrc = p.image || p.fallbackImage;
           const fallbackAttr = p.fallbackImage ? `onerror="this.onerror=null; this.src='${p.fallbackImage}';"` : '';
@@ -666,40 +674,21 @@
 
               <div class="project-body-full">
                 <div>
-                  <div class="project-top-row">
-                    <div>
-                      <span class="project-badge-tag">${p.badge || 'FEATURED PROJECT'}</span>
-                      <h3 class="project-main-title">${p.title}</h3>
-                      <div class="project-tagline">${p.tagline}</div>
-                      ${p.associatedWith ? `<div class="project-association">${p.associatedWith} ${p.period ? '· ' + p.period : ''}</div>` : ''}
-                    </div>
-
-                    <div class="project-actions">
-                      ${p.liveUrl ? `<a href="${p.liveUrl}" target="_blank" class="btn-action btn-primary"><i data-lucide="external-link"></i> Live Demo</a>` : ''}
-                      ${p.githubUrl ? `<a href="${p.githubUrl}" target="_blank" class="btn-action btn-secondary"><i data-lucide="github"></i> GitHub</a>` : ''}
-                      ${p.youtubeUrl ? `<a href="${p.youtubeUrl}" target="_blank" class="btn-action btn-secondary"><i data-lucide="video"></i> Demo Video</a>` : ''}
-                    </div>
-                  </div>
-
+                  <div class="project-badge-tag">${p.badge || 'FEATURED PROJECT'}</div>
+                  <h3 class="project-main-title">${p.title}</h3>
+                  <div class="project-tagline">${p.tagline}</div>
                   <p class="project-desc-text">${p.description}</p>
-
-                  ${(p.keyFeatures && p.keyFeatures.length > 0) ? `
-                    <ul class="project-features-list">
-                      ${p.keyFeatures.map(feat => `<li><i data-lucide="check-circle-2"></i> ${feat}</li>`).join('')}
-                    </ul>
-                  ` : ''}
                 </div>
 
                 <div class="project-footer-row">
                   <div class="pill-tags">
-                    ${(p.techStack || []).map(t => `<span class="skill-pill">${t}</span>`).join('')}
+                    ${(p.techStack || []).slice(0, 4).map(t => `<span class="skill-pill">${t}</span>`).join('')}
                   </div>
 
-                  ${(p.teammates && p.teammates.length > 0) ? `
-                    <div class="team-meta">
-                      <i data-lucide="users"></i> Team: ${p.teammates.join(', ')}
-                    </div>
-                  ` : ''}
+                  <div class="project-actions">
+                    ${p.liveUrl ? `<a href="${p.liveUrl.startsWith('http') ? p.liveUrl : 'https://' + p.liveUrl}" target="_blank" class="btn-action btn-primary"><i data-lucide="external-link"></i> Live Demo</a>` : ''}
+                    ${p.githubUrl ? `<a href="${p.githubUrl.startsWith('http') ? p.githubUrl : 'https://' + p.githubUrl}" target="_blank" class="btn-action btn-secondary"><i data-lucide="github"></i> Code</a>` : ''}
+                  </div>
                 </div>
               </div>
             </div>

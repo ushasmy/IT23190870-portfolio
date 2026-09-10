@@ -1,7 +1,7 @@
 {
-  "name": "portfolio-vibed",
+  "name": "IT23190870-portfolio",
   "version": "1.0.0",
-  "description": "Ummu Salma Hasmy - Software Engineering Portfolio",
+  "description": "IT23190870 - Dummy Software Engineering Portfolio",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
